@@ -2,10 +2,10 @@ root = document.documentElement
 
 module.exports =
   activate: (state) ->
-    atom.config.observe 'one-dark-mini-ui.fontSize', (value) ->
+    atom.config.observe 'gai-ui.fontSize', (value) ->
       setFontSize(value)
 
-    atom.config.observe 'one-dark-mini-ui.tabSizing', (value) ->
+    atom.config.observe 'gai-ui.tabSizing', (value) ->
       setTabSizing(value)
 
   deactivate: ->
@@ -24,7 +24,7 @@ unsetFontSize = ->
 
 # Tab Sizing -----------------------
 setTabSizing = (tabSizing) ->
-  root.setAttribute('theme-one-dark-mini-ui-tabsizing', tabSizing.toLowerCase())
+  root.setAttribute('theme-gai-ui-tabsizing', tabSizing.toLowerCase())
 
 unsetTabSizing = ->
-  root.removeAttribute('theme-one-dark-mini-ui-tabsizing')
+  root.removeAttribute('theme-gai-ui-tabsizing')
